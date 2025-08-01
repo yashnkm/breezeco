@@ -136,7 +136,7 @@ const ReviewCard = ({ review }: { review: Review }) => {
             <div className="flex items-center space-x-2">
               <h3 className="font-semibold text-gray-800">{review.name}</h3>
               {review.verified && (
-                <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full flex items-center">
+                <span className="bg-powder-blue text-steel-blue text-xs px-2 py-1 rounded-full flex items-center">
                   <span className="material-icons text-xs mr-1">verified</span>
                   Verified
                 </span>
@@ -163,7 +163,7 @@ const ReviewCard = ({ review }: { review: Review }) => {
         <button
           onClick={() => setIsHelpful(!isHelpful)}
           className={`flex items-center space-x-2 text-sm ${
-            isHelpful ? 'text-brand-green' : 'text-gray-500 hover:text-gray-700'
+            isHelpful ? 'text-steel-blue' : 'text-gray-500 hover:text-gray-700'
           }`}
         >
           <span className="material-icons text-sm">thumb_up</span>
@@ -208,7 +208,7 @@ const ReviewFilter = ({
             <button
               onClick={() => handleRatingChange(null)}
               className={`block w-full text-left px-3 py-2 rounded ${
-                selectedRating === null ? 'bg-brand-green text-white' : 'hover:bg-gray-100'
+                selectedRating === null ? 'bg-steel-blue text-white hover:bg-steel-blue-dark' : 'hover:bg-gray-100'
               }`}
             >
               All Ratings
@@ -218,7 +218,7 @@ const ReviewFilter = ({
                 key={rating}
                 onClick={() => handleRatingChange(rating)}
                 className={`flex items-center w-full px-3 py-2 rounded ${
-                  selectedRating === rating ? 'bg-brand-green text-white' : 'hover:bg-gray-100'
+                  selectedRating === rating ? 'bg-steel-blue text-white hover:bg-steel-blue-dark' : 'hover:bg-gray-100'
                 }`}
               >
                 <div className="flex mr-2">
@@ -246,7 +246,7 @@ const ReviewFilter = ({
             <button
               onClick={() => handleProductChange(null)}
               className={`block w-full text-left px-3 py-2 rounded ${
-                selectedProduct === null ? 'bg-brand-green text-white' : 'hover:bg-gray-100'
+                selectedProduct === null ? 'bg-steel-blue text-white hover:bg-steel-blue-dark' : 'text-gray-700 hover:bg-gray-200'
               }`}
             >
               All Products
@@ -256,7 +256,7 @@ const ReviewFilter = ({
                 key={product}
                 onClick={() => handleProductChange(product)}
                 className={`block w-full text-left px-3 py-2 rounded ${
-                  selectedProduct === product ? 'bg-brand-green text-white' : 'hover:bg-gray-100'
+                  selectedProduct === product ? 'bg-steel-blue text-white hover:bg-steel-blue-dark' : 'text-gray-700 hover:bg-gray-200'
                 }`}
               >
                 {product}
@@ -292,7 +292,7 @@ const Reviews = () => {
   }));
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-ivory-white">
       {/* Hero Section */}
       <section className="bg-white py-16">
         <div className="container mx-auto px-6">
@@ -306,11 +306,11 @@ const Reviews = () => {
           </div>
 
           {/* Review Stats */}
-          <div className="bg-gray-50 rounded-lg p-8 max-w-4xl mx-auto">
+          <div className="bg-cool-gray rounded-lg p-8 max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Overall Rating */}
               <div className="text-center">
-                <div className="text-6xl font-bold text-brand-green mb-2">
+                <div className="text-6xl font-bold text-steel-blue mb-2">
                   {averageRating.toFixed(1)}
                 </div>
                 <div className="flex justify-center mb-2">
@@ -337,7 +337,7 @@ const Reviews = () => {
                     <span className="w-8 text-sm text-gray-600">{rating}★</span>
                     <div className="flex-1 mx-3 bg-gray-200 rounded-full h-2">
                       <div
-                        className="bg-brand-green h-2 rounded-full"
+                        className="bg-steel-blue h-2 rounded-full"
                         style={{ width: `${percentage}%` }}
                       ></div>
                     </div>

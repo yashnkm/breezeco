@@ -277,7 +277,7 @@ const ArticleCard = ({ article, onClick }: { article: Article; onClick: () => vo
       />
       <div className="p-6">
         <div className="flex items-center justify-between mb-3">
-          <span className="bg-brand-green/10 text-brand-green text-xs font-medium px-2 py-1 rounded-full">
+          <span className="bg-powder-blue text-steel-blue text-xs font-medium px-2 py-1 rounded-full">
             {article.category}
           </span>
           <div className="flex items-center text-gray-500 text-sm">
@@ -345,7 +345,7 @@ const ArticleModal = ({
         
         <div className="p-8">
           <div className="flex items-center justify-between mb-6">
-            <span className="bg-brand-green/10 text-brand-green text-sm font-medium px-3 py-1 rounded-full">
+            <span className="bg-powder-blue text-steel-blue text-sm font-medium px-3 py-1 rounded-full">
               {article.category}
             </span>
             <div className="flex items-center text-gray-500 text-sm">
@@ -413,7 +413,7 @@ const Learn = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-ivory-white">
       {/* Hero Section */}
       <section className="bg-white py-16">
         <div className="container mx-auto px-6">
@@ -429,15 +429,15 @@ const Learn = () => {
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-4xl font-bold text-brand-green mb-2">90%</div>
+              <div className="text-4xl font-bold text-steel-blue mb-2">90%</div>
               <p className="text-gray-600">of time spent indoors</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-brand-green mb-2">2-5x</div>
+              <div className="text-4xl font-bold text-steel-blue mb-2">2-5x</div>
               <p className="text-gray-600">more polluted indoor air can be</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-brand-green mb-2">50M</div>
+              <div className="text-4xl font-bold text-steel-blue mb-2">50M</div>
               <p className="text-gray-600">Americans affected by allergies</p>
             </div>
           </div>
@@ -456,7 +456,7 @@ const Learn = () => {
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                     selectedCategory === category
-                      ? 'bg-brand-green text-white'
+                      ? 'bg-steel-blue text-white hover:bg-steel-blue-dark'
                       : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
                   }`}
                 >
@@ -517,7 +517,7 @@ const Learn = () => {
                 answer: "Yes, high-quality air purifiers with activated carbon and HEPA or PECO filtration can effectively remove cigarette smoke particles and odors. However, eliminating the source of smoke is always the best approach."
               }
             ].map((faq, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg p-6">
+              <div key={index} className="bg-cool-gray rounded-lg p-6">
                 <h3 className="font-semibold text-gray-800 mb-2">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </div>

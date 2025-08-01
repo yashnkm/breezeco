@@ -1,3 +1,5 @@
+import videoSrc from '/Monsoon_Serenity_with_Air_Purifier.mp4';
+
 const Hero = () => {
   return (
     <section className="relative text-white py-40 overflow-hidden min-h-screen flex items-center">
@@ -9,7 +11,7 @@ const Hero = () => {
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
       >
-        <source src="./Monsoon_Serenity_with_Air_Purifier.mp4" type="video/mp4" />
+        <source src={videoSrc} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       

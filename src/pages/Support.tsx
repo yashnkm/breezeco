@@ -317,7 +317,7 @@ const SupportArticleComponent = ({
     <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-200">
       <button
         onClick={onBack}
-        className="flex items-center text-brand-green hover:text-brand-green-hover mb-6"
+        className="flex items-center text-steel-blue hover:text-steel-blue-hover mb-6"
       >
         <span className="material-icons mr-2">arrow_back</span>
         Back to Support
@@ -351,7 +351,7 @@ const SupportArticleComponent = ({
               onClick={() => setIsHelpful(!isHelpful)}
               className={`flex items-center space-x-2 px-4 py-2 rounded-full text-sm ${
                 isHelpful 
-                  ? 'bg-brand-green text-white' 
+                  ? 'bg-steel-blue text-white hover:bg-steel-blue-dark' 
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -394,10 +394,10 @@ const ContactForm = () => {
 
   if (isSubmitted) {
     return (
-      <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
-        <span className="material-icons text-green-600 text-4xl mb-4">check_circle</span>
-        <h3 className="text-xl font-semibold text-green-800 mb-2">Message Sent!</h3>
-        <p className="text-green-700">
+      <div className="bg-powder-blue border border-steel-blue rounded-lg p-8 text-center">
+        <span className="material-icons text-steel-blue text-4xl mb-4">check_circle</span>
+        <h3 className="text-xl font-semibold text-steel-blue mb-2">Message Sent!</h3>
+        <p className="text-steel-blue">
           We've received your message and will respond within 24 hours. 
           Check your email for a confirmation with your ticket number.
         </p>
@@ -420,7 +420,7 @@ const ContactForm = () => {
             value={form.name}
             onChange={handleChange}
             required
-            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:border-transparent"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-steel-blue focus:border-transparent"
           />
         </div>
         <div>
@@ -433,7 +433,7 @@ const ContactForm = () => {
             value={form.email}
             onChange={handleChange}
             required
-            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:border-transparent"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-steel-blue focus:border-transparent"
           />
         </div>
       </div>
@@ -447,7 +447,7 @@ const ContactForm = () => {
           value={form.subject}
           onChange={handleChange}
           required
-          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:border-transparent"
+          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-steel-blue focus:border-transparent"
         >
           <option value="">Select a topic...</option>
           <option value="technical-support">Technical Support</option>
@@ -468,7 +468,7 @@ const ContactForm = () => {
           value={form.orderNumber}
           onChange={handleChange}
           placeholder="e.g., BC-2024-001234"
-          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:border-transparent"
+          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-steel-blue focus:border-transparent"
         />
       </div>
       
@@ -483,7 +483,7 @@ const ContactForm = () => {
           required
           rows={6}
           placeholder="Please describe your issue or question in detail..."
-          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:border-transparent"
+          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-steel-blue focus:border-transparent"
         />
       </div>
       
@@ -508,7 +508,7 @@ const Support = () => {
 
   if (selectedArticle) {
     return (
-      <div className="min-h-screen bg-gray-50 py-8">
+      <div className="min-h-screen bg-cool-gray py-8">
         <div className="container mx-auto px-6">
           <SupportArticleComponent 
             article={selectedArticle} 
@@ -520,7 +520,7 @@ const Support = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-ivory-white">
       {/* Hero Section */}
       <section className="bg-white py-16">
         <div className="container mx-auto px-6">
@@ -535,23 +535,23 @@ const Support = () => {
 
           {/* Quick Contact Options */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="text-center p-6 bg-gray-50 rounded-lg">
-              <span className="material-icons text-3xl text-brand-green mb-3">phone</span>
+            <div className="text-center p-6 bg-cool-gray rounded-lg">
+              <span className="material-icons text-3xl text-steel-blue mb-3">phone</span>
               <h3 className="font-semibold text-gray-800 mb-2">Call Us</h3>
               <p className="text-gray-600 text-sm mb-2">Mon-Fri 9AM-6PM EST</p>
-              <p className="text-brand-green font-semibold">1-800-BREEZE1</p>
+              <p className="text-steel-blue font-semibold">1-800-BREEZE1</p>
             </div>
-            <div className="text-center p-6 bg-gray-50 rounded-lg">
-              <span className="material-icons text-3xl text-brand-green mb-3">chat</span>
+            <div className="text-center p-6 bg-cool-gray rounded-lg">
+              <span className="material-icons text-3xl text-steel-blue mb-3">chat</span>
               <h3 className="font-semibold text-gray-800 mb-2">Live Chat</h3>
               <p className="text-gray-600 text-sm mb-2">Average response: 2 minutes</p>
-              <button className="text-brand-green font-semibold hover:underline">Start Chat</button>
+              <button className="text-steel-blue font-semibold hover:underline">Start Chat</button>
             </div>
-            <div className="text-center p-6 bg-gray-50 rounded-lg">
-              <span className="material-icons text-3xl text-brand-green mb-3">email</span>
+            <div className="text-center p-6 bg-cool-gray rounded-lg">
+              <span className="material-icons text-3xl text-steel-blue mb-3">email</span>
               <h3 className="font-semibold text-gray-800 mb-2">Email Support</h3>
               <p className="text-gray-600 text-sm mb-2">Response within 24 hours</p>
-              <p className="text-brand-green font-semibold">support@breezecoair.com</p>
+              <p className="text-steel-blue font-semibold">support@breezecoair.com</p>
             </div>
           </div>
         </div>
@@ -566,8 +566,8 @@ const Support = () => {
                 onClick={() => setActiveTab('help')}
                 className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                   activeTab === 'help'
-                    ? 'bg-brand-green text-white'
-                    : 'text-gray-700 hover:bg-gray-100'
+                    ? 'bg-steel-blue text-white hover:bg-steel-blue-dark'
+                    : 'text-gray-700 hover:bg-gray-700 hover:text-white'
                 }`}
               >
                 Help Articles
@@ -576,8 +576,8 @@ const Support = () => {
                 onClick={() => setActiveTab('contact')}
                 className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                   activeTab === 'contact'
-                    ? 'bg-brand-green text-white'
-                    : 'text-gray-700 hover:bg-gray-100'
+                    ? 'bg-steel-blue text-white hover:bg-steel-blue-dark'
+                    : 'text-gray-700 hover:bg-gray-700 hover:text-white'
                 }`}
               >
                 Contact Us
@@ -592,7 +592,7 @@ const Support = () => {
                 {supportCategories.map((category) => (
                   <div key={category.id} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
                     <div className="text-center mb-4">
-                      <span className={`material-icons text-4xl text-brand-green mb-3`}>
+                      <span className={`material-icons text-4xl text-steel-blue mb-3`}>
                         {category.icon}
                       </span>
                       <h3 className="text-xl font-semibold text-gray-800 mb-2">
@@ -605,7 +605,7 @@ const Support = () => {
                         <button
                           key={article.id}
                           onClick={() => setSelectedArticle(article)}
-                          className="block w-full text-left p-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors"
+                          className="block w-full text-left p-3 rounded-lg bg-cool-gray hover:bg-gray-100 transition-colors"
                         >
                           <div className="text-sm font-medium text-gray-800 mb-1">
                             {article.title}

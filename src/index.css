@@ -7,50 +7,56 @@
 
 :root {
   font-family: 'Poppins', sans-serif;
+  /* Light Theme Color Variables */
+  --ivory-white: #FDFDFD;
+  --cool-gray: #EAEFF2;
+  --steel-blue: #4682B4;
+  --powder-blue: #B0D6E8;
+  --steel-blue-hover: #3A6F99;
+  --steel-blue-dark: #2D5A87;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #F8F9FA;
-  color: #333;
+  background-color: var(--ivory-white);
+  color: #2D3748;
   margin: 0;
   line-height: 1.6;
 }
 
 .header {
-  background-color: #FFFFFF;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: var(--ivory-white);
+  box-shadow: 0 2px 4px rgba(70, 130, 180, 0.1);
 }
 
 .nav-link {
-  color: #333;
+  color: #2D3748;
   font-weight: 500;
   transition: color 0.3s;
 }
 
 .nav-link:hover {
-  color: #4CAF50;
+  color: var(--steel-blue);
 }
 
-
 .hero-overlay {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(70, 130, 180, 0.4);
 }
 
 .btn-primary {
-  background-color: #4CAF50;
+  background-color: var(--steel-blue);
   color: white;
   transition: background-color 0.3s;
 }
 
 .btn-primary:hover {
-  background-color: #45a049;
+  background-color: var(--steel-blue-hover);
 }
 
 .card {
-  background-color: white;
+  background-color: var(--ivory-white);
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(70, 130, 180, 0.1);
   overflow: hidden;
   transition: transform 0.3s;
 }
@@ -60,7 +66,7 @@ body {
 }
 
 .feature-icon {
-  color: #4CAF50;
+  color: var(--steel-blue);
 }
 
 /* Cart animations */

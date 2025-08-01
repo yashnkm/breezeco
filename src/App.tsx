@@ -14,7 +14,7 @@ function App() {
 
   return (
     <Router basename="/breezeco">
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-ivory-white">
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />

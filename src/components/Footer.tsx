@@ -37,7 +37,7 @@ const Footer = () => {
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
                     <a 
-                      className="hover:text-green-400 transition-colors" 
+                      className="hover:text-steel-blue transition-colors" 
                       href="#"
                     >
                       {link}

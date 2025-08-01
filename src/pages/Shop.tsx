@@ -92,7 +92,7 @@ const NotificationToast = ({ notification, onClose }: { notification: Notificati
   }, [onClose]);
 
   const bgColor = {
-    success: 'bg-green-500',
+    success: 'bg-steel-blue',
     info: 'bg-blue-500',
     warning: 'bg-yellow-500',
     error: 'bg-red-500'
@@ -165,7 +165,7 @@ const CartDrawer = ({
                   <img src={item.image} alt={item.name} className="w-16 h-16 object-cover rounded" />
                   <div className="flex-1">
                     <h3 className="font-medium text-gray-800">{item.name}</h3>
-                    <p className="text-brand-green font-bold">${item.price.toLocaleString()}</p>
+                    <p className="text-steel-blue font-bold">${item.price.toLocaleString()}</p>
                     <div className="flex items-center space-x-2 mt-2">
                       <button 
                         onClick={() => onUpdateQuantity(item.id, Math.max(1, item.quantity - 1))}
@@ -199,7 +199,7 @@ const CartDrawer = ({
           <div className="border-t p-6 space-y-4">
             <div className="flex justify-between items-center text-lg font-bold">
               <span>Total:</span>
-              <span className="text-brand-green">${total.toLocaleString()}</span>
+              <span className="text-steel-blue">${total.toLocaleString()}</span>
             </div>
             <button 
               onClick={onCheckout}
@@ -274,7 +274,7 @@ const CheckoutModal = ({
                   placeholder="Email address"
                   value={formData.email}
                   onChange={(e) => setFormData({...formData, email: e.target.value})}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-steel-blue focus:border-transparent"
                   required
                 />
               </div>
@@ -287,7 +287,7 @@ const CheckoutModal = ({
                     placeholder="First name"
                     value={formData.firstName}
                     onChange={(e) => setFormData({...formData, firstName: e.target.value})}
-                    className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:border-transparent"
+                    className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-steel-blue focus:border-transparent"
                     required
                   />
                   <input
@@ -295,7 +295,7 @@ const CheckoutModal = ({
                     placeholder="Last name"
                     value={formData.lastName}
                     onChange={(e) => setFormData({...formData, lastName: e.target.value})}
-                    className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:border-transparent"
+                    className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-steel-blue focus:border-transparent"
                     required
                   />
                 </div>
@@ -304,7 +304,7 @@ const CheckoutModal = ({
                   placeholder="Address"
                   value={formData.address}
                   onChange={(e) => setFormData({...formData, address: e.target.value})}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:border-transparent mt-4"
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-steel-blue focus:border-transparent mt-4"
                   required
                 />
                 <div className="grid grid-cols-2 gap-4 mt-4">
@@ -313,7 +313,7 @@ const CheckoutModal = ({
                     placeholder="City"
                     value={formData.city}
                     onChange={(e) => setFormData({...formData, city: e.target.value})}
-                    className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:border-transparent"
+                    className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-steel-blue focus:border-transparent"
                     required
                   />
                   <input
@@ -321,7 +321,7 @@ const CheckoutModal = ({
                     placeholder="ZIP code"
                     value={formData.zipCode}
                     onChange={(e) => setFormData({...formData, zipCode: e.target.value})}
-                    className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:border-transparent"
+                    className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-steel-blue focus:border-transparent"
                     required
                   />
                 </div>
@@ -334,7 +334,7 @@ const CheckoutModal = ({
                   placeholder="Card number"
                   value={formData.cardNumber}
                   onChange={(e) => setFormData({...formData, cardNumber: e.target.value})}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-steel-blue focus:border-transparent"
                   required
                 />
                 <div className="grid grid-cols-2 gap-4 mt-4">
@@ -343,7 +343,7 @@ const CheckoutModal = ({
                     placeholder="MM/YY"
                     value={formData.expiryDate}
                     onChange={(e) => setFormData({...formData, expiryDate: e.target.value})}
-                    className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:border-transparent"
+                    className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-steel-blue focus:border-transparent"
                     required
                   />
                   <input
@@ -351,7 +351,7 @@ const CheckoutModal = ({
                     placeholder="CVV"
                     value={formData.cvv}
                     onChange={(e) => setFormData({...formData, cvv: e.target.value})}
-                    className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:border-transparent"
+                    className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-steel-blue focus:border-transparent"
                     required
                   />
                 </div>
@@ -369,7 +369,7 @@ const CheckoutModal = ({
           {/* Order Summary */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Order Summary</h3>
-            <div className="bg-gray-50 rounded-lg p-4 space-y-4">
+            <div className="bg-cool-gray rounded-lg p-4 space-y-4">
               {cartItems.map((item) => (
                 <div key={item.id} className="flex justify-between items-center">
                   <div className="flex items-center space-x-3">
@@ -398,7 +398,7 @@ const CheckoutModal = ({
                 </div>
                 <div className="flex justify-between font-bold text-lg border-t pt-2">
                   <span>Total:</span>
-                  <span className="text-brand-green">${finalTotal.toLocaleString()}</span>
+                  <span className="text-steel-blue">${finalTotal.toLocaleString()}</span>
                 </div>
               </div>
             </div>
@@ -451,7 +451,7 @@ const ProductCard = ({ product, onAddToCart }: { product: Product; onAddToCart: 
             </span>
           )}
           {product.isRefurbished && (
-            <span className="bg-green-600 text-white text-xs font-bold px-2 py-1 rounded">
+            <span className="bg-steel-blue text-white text-xs font-bold px-2 py-1 rounded">
               REFURBISHED
             </span>
           )}
@@ -501,7 +501,7 @@ const ProductCard = ({ product, onAddToCart }: { product: Product; onAddToCart: 
             )}
           </div>
           {product.originalPrice && (
-            <span className="text-sm font-bold text-green-600">
+            <span className="text-sm font-bold text-steel-blue">
               Save {formatPrice(product.originalPrice - product.price)}
             </span>
           )}
@@ -510,7 +510,7 @@ const ProductCard = ({ product, onAddToCart }: { product: Product; onAddToCart: 
         {/* Action Button */}
         <button 
           onClick={() => onAddToCart(product)}
-          className="w-full btn-primary py-2 px-4 rounded-full font-semibold hover:bg-brand-green-hover transition-colors"
+          className="w-full btn-primary py-2 px-4 rounded-full font-semibold hover:bg-steel-blue-dark transition-colors"
         >
           Add to Cart
         </button>
@@ -626,7 +626,7 @@ const Shop = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-ivory-white">
       {/* Notifications */}
       {notifications.map((notification) => (
         <NotificationToast
@@ -639,7 +639,7 @@ const Shop = () => {
       {/* Cart Button */}
       <button
         onClick={() => setIsCartOpen(true)}
-        className="fixed bottom-6 right-6 bg-brand-green text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg hover:bg-brand-green-hover transition-colors z-40"
+        className="fixed bottom-6 right-6 bg-steel-blue text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg hover:bg-steel-blue-dark transition-colors z-40"
       >
         <span className="material-icons">shopping_cart</span>
         {cartItemCount > 0 && (
@@ -689,7 +689,7 @@ const Shop = () => {
                 placeholder="Search products..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-brand-green focus:border-transparent"
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-steel-blue focus:border-transparent"
               />
             </div>
           </div>
@@ -707,7 +707,7 @@ const Shop = () => {
                 onClick={() => setSortBy(key)}
                 className={`px-3 py-1 text-sm rounded-full transition-colors ${
                   sortBy === key
-                    ? 'bg-brand-green text-white'
+                    ? 'bg-steel-blue text-white hover:bg-steel-blue-dark'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -751,7 +751,7 @@ const Shop = () => {
       </section>
 
       {/* Comparison Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-cool-gray">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -762,7 +762,7 @@ const Shop = () => {
           <div className="bg-white rounded-lg shadow-lg overflow-hidden max-w-4xl mx-auto">
             <div className="overflow-x-auto">
               <table className="w-full">
-                <thead className="bg-gray-50">
+                <thead className="bg-cool-gray">
                   <tr>
                     <th className="text-left p-6 font-bold text-gray-800">Features</th>
                     <th className="text-center p-6">
@@ -773,7 +773,7 @@ const Shop = () => {
                           className="w-20 h-20 object-cover rounded-lg mb-2"
                         />
                         <h3 className="font-bold">Air Pro</h3>
-                        <p className="text-brand-green font-bold">$799</p>
+                        <p className="text-steel-blue font-bold">$799</p>
                       </div>
                     </th>
                     <th className="text-center p-6">
@@ -784,7 +784,7 @@ const Shop = () => {
                           className="w-20 h-20 object-cover rounded-lg mb-2"
                         />
                         <h3 className="font-bold">Air Mini+</h3>
-                        <p className="text-brand-green font-bold">$399</p>
+                        <p className="text-steel-blue font-bold">$399</p>
                       </div>
                     </th>
                   </tr>
@@ -798,11 +798,11 @@ const Shop = () => {
                     { feature: 'Smoke Detection', airPro: false, airMini: true },
                     { feature: 'Compact Design', airPro: false, airMini: true }
                   ].map((row, index) => (
-                    <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                    <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-cool-gray'}>
                       <td className="p-4 font-medium text-gray-800">{row.feature}</td>
                       <td className="p-4 text-center">
                         {typeof row.airPro === 'boolean' ? (
-                          <span className={`material-icons ${row.airPro ? 'text-green-500' : 'text-gray-300'}`}>
+                          <span className={`material-icons ${row.airPro ? 'text-steel-blue' : 'text-gray-300'}`}>
                             {row.airPro ? 'check_circle' : 'cancel'}
                           </span>
                         ) : (
@@ -811,7 +811,7 @@ const Shop = () => {
                       </td>
                       <td className="p-4 text-center">
                         {typeof row.airMini === 'boolean' ? (
-                          <span className={`material-icons ${row.airMini ? 'text-green-500' : 'text-gray-300'}`}>
+                          <span className={`material-icons ${row.airMini ? 'text-steel-blue' : 'text-gray-300'}`}>
                             {row.airMini ? 'check_circle' : 'cancel'}
                           </span>
                         ) : (
@@ -835,8 +835,8 @@ const Shop = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-brand-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="material-icons text-brand-green text-2xl">science</span>
+              <div className="w-16 h-16 bg-powder-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="material-icons text-steel-blue text-2xl">science</span>
               </div>
               <h3 className="font-bold text-gray-800 mb-2">PECO Technology</h3>
               <p className="text-gray-600 text-sm">
@@ -844,8 +844,8 @@ const Shop = () => {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-brand-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="material-icons text-brand-green text-2xl">verified</span>
+              <div className="w-16 h-16 bg-powder-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="material-icons text-steel-blue text-2xl">verified</span>
               </div>
               <h3 className="font-bold text-gray-800 mb-2">Certified Performance</h3>
               <p className="text-gray-600 text-sm">
@@ -853,8 +853,8 @@ const Shop = () => {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-brand-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="material-icons text-brand-green text-2xl">support_agent</span>
+              <div className="w-16 h-16 bg-powder-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="material-icons text-steel-blue text-2xl">support_agent</span>
               </div>
               <h3 className="font-bold text-gray-800 mb-2">Expert Support</h3>
               <p className="text-gray-600 text-sm">
