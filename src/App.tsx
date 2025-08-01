@@ -12,11 +12,8 @@ function App() {
   // Initialize smooth scrolling with anchor support
   useSmoothScroll();
 
-  // Get base path from environment
-  const basename = import.meta.env.DEV ? '' : '/breezeco';
-
   return (
-    <Router basename={basename}>
+    <Router basename="/breezeco">
       <div className="min-h-screen bg-gray-50">
         <Header />
         <Routes>
