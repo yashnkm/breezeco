@@ -9,11 +9,7 @@ export const useSmoothScroll = () => {
       lenis = new Lenis({
         duration: 1.2,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        direction: 'vertical',
-        gestureDirection: 'vertical',
-        smooth: true,
-        mouseMultiplier: 1,
-        smoothTouch: false,
+    
         touchMultiplier: 2,
         infinite: false,
       });
@@ -31,7 +27,7 @@ export const useSmoothScroll = () => {
       
       if (href && href.startsWith('#')) {
         e.preventDefault();
-        const element = document.querySelector(href);
+        const element = document.querySelector(href) as HTMLElement;
         if (element && lenis) {
           lenis.scrollTo(element, {
             offset: -80, // Account for fixed header
